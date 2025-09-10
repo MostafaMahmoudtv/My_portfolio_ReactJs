@@ -8,7 +8,7 @@ const projects = [
     id: 1,
     title: "Nahr elorobah site ",
     desc: "A puplished site for Nahelorobah company",
-    image: "/assets/نهر العروبة 1.png",
+    image: "assets/نهر العروبة 1.png",
     url: "https://cna.sa",
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     title: "E-Commerce Store",
     desc: "A complete e-commerce store built with HTML, CSS, JavaScript, and Firebase",
     image:
-      "/assets/Blue And White Modern Responsive Website Development Services Instagram Post.png",
+      "assets/Blue And White Modern Responsive Website Development Services Instagram Post.png",
     url: "https://www.youtube.com/watch?v=d-c087I97FU",
   },
 
@@ -25,7 +25,7 @@ const projects = [
     title: "Landing Page",
     desc: "A professional landing page designed with Bootstrap",
     image:
-      "assets/Blue And White Modern Responsive Website Development Services Instagram Post (1).png",
+      "/assets/Blue And White Modern Responsive Website Development Services Instagram Post (1).png",
     url: "https://mostafamahmoudtv.github.io/landing_page_for_food_product/",
   },
   {
@@ -33,8 +33,22 @@ const projects = [
     title: "Landing page ",
     desc: "build Landing page with pure html and css",
     image:
-      "assets/Blue And White Modern Responsive Website Development Services Instagram Post (7).png",
+      "/assets/Blue And White Modern Responsive Website Development Services Instagram Post (7).png",
     url: "https://mostafamahmoudtv.github.io/landing-page-with-bootstrap/",
+  },
+  {
+    id: 5,
+    title: "Admin_dahboard ",
+    desc: "build admin dashbaord with CRUD operaions React js",
+    image: "/assets/main-admin-dashboard.png",
+    url: "https://youtu.be/f4Xl_3xky_s?si=0dJOJjePRi9gvUtX",
+  },
+  {
+    id: 6,
+    title: "todo-list app ",
+    desc: "build todo list app with React js",
+    image: "/assets/todolist.png",
+    url: "https://mostafamahmoudtv.github.io/todo_app_reactjs/",
   },
 ];
 const testimonials = [
@@ -51,64 +65,67 @@ function App() {
   return (
     <div className="font-sans bg-gray-50 text-gray-900">
       {/* Navbar */}
-     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
-  <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 className="text-2xl font-bold text-indigo-600">Moustafa</h1>
+      <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-indigo-600">Moustafa</h1>
 
-    {/* Hidden checkbox + label (hamburger button) */}
-    <div className="md:hidden relative">
-      <input type="checkbox" id="menu-toggle" className="peer hidden" />
-      <label htmlFor="menu-toggle" className="cursor-pointer block">
-        <svg
-          className="w-6 h-6 text-gray-800"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </label>
+          {/* Hidden checkbox + label (hamburger button) */}
+          <div className="md:hidden relative">
+            <input type="checkbox" id="menu-toggle" className="peer hidden" />
+            <label htmlFor="menu-toggle" className="cursor-pointer block">
+              <svg
+                className="w-6 h-6 text-gray-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </label>
 
-      {/* Mobile menu */}
-      <div className="absolute right-0 top-10 w-40 bg-white shadow-md rounded-md py-4 px-4 hidden peer-checked:flex flex-col space-y-3 z-50">
-        {['home', 'about', 'projects','testimonials', 'contact'].map((section) => (
-          <Link
-            key={section}
-            to={section}
-            smooth={true}
-            duration={800}
-            className="cursor-pointer hover:text-indigo-600 capitalize"
-          >
-            {section}
-          </Link>
-        ))}
-      </div>
-    </div>
+            {/* Mobile menu */}
+            <div className="absolute right-0 top-10 w-40 bg-white shadow-md rounded-md py-4 px-4 hidden peer-checked:flex flex-col space-y-3 z-50">
+              {["home", "about", "projects", "testimonials", "contact"].map(
+                (section) => (
+                  <Link
+                    key={section}
+                    to={section}
+                    smooth={true}
+                    duration={800}
+                    className="cursor-pointer hover:text-indigo-600 capitalize"
+                  >
+                    {section}
+                  </Link>
+                )
+              )}
+            </div>
+          </div>
 
-    {/* Desktop Menu */}
-    <ul className="hidden md:flex space-x-6">
-      {['home', 'about', 'projects','testimonials', 'contact'].map((section) => (
-        <li key={section}>
-          <Link
-            to={section}
-            smooth={true}
-            duration={800}
-            className="cursor-pointer hover:text-indigo-600 capitalize"
-          >
-            {section}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-</nav>
-
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-6">
+            {["home", "about", "projects", "testimonials", "contact"].map(
+              (section) => (
+                <li key={section}>
+                  <Link
+                    to={section}
+                    smooth={true}
+                    duration={800}
+                    className="cursor-pointer hover:text-indigo-600 capitalize"
+                  >
+                    {section}
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+      </nav>
 
       {/* Hero */}
       <section
@@ -126,7 +143,7 @@ function App() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          Hi, I'm Moustafa 
+          Hi, I'm Moustafa
         </motion.h2>
         <motion.p
           className="text-xl mb-6 max-w-xl"
