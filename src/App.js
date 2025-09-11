@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
@@ -50,6 +50,7 @@ const projects = [
     image: "/assets/todolist.png",
     url: "https://mostafamahmoudtv.github.io/todo_app_reactjs/",
   },
+  
 ];
 const testimonials = [
   {
@@ -61,7 +62,14 @@ const testimonials = [
     screenshot: "/assets/2.png",
   },
 ];
+
 function App() {
+  const [visibleCount, setVisibleCount] = useState(6);
+
+  const handleShowMore = () => {
+    setVisibleCount((prev) => (prev === 6 ? projects.length : 6));
+  };
+
   return (
     <div className="font-sans bg-gray-50 text-gray-900">
       {/* Navbar */}
@@ -155,12 +163,14 @@ function App() {
           and modern websites using React, Tailwind CSS, Bootstrap, HTML, and
           CSS.
         </motion.p>
-        <a
-          href="#projects"
-          className="bg-white text-indigo-600 px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-gray-200"
+        <Link
+          to="projects"
+          smooth={true}
+          duration={800}
+          className="bg-white text-indigo-600 px-6 py-3 rounded-lg shadow-md font-semibold hover:bg-gray-200 cursor-pointer"
         >
           View My Work
-        </a>
+        </Link>
       </section>
 
       {/* About */}
@@ -181,7 +191,7 @@ function App() {
       <section id="projects" className="py-20 bg-gray-100 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">Projects</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {projects.map((p, index) => (
+          {projects.slice(0, visibleCount).map((p, index) => (
             <motion.div
               key={p.id}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition"
@@ -205,6 +215,17 @@ function App() {
             </motion.div>
           ))}
         </div>
+
+        {projects.length > 6 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={handleShowMore}
+              className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition"
+            >
+              {visibleCount === 6 ? "Show More" : "Show Less"}
+            </button>
+          </div>
+        )}
       </section>
       <section id="testimonials" className="py-20 bg-gray-50 px-6">
         <h2 className="text-3xl font-bold text-center mb-10">
