@@ -6,13 +6,28 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 const projects = [
   {
     id: 1,
+    title: "Thaat Company site",
+    desc: "Developed a modern, responsive landing page for Zat Company using HTML, Tailwind CSS, and JavaScript, with smooth animations and an engaging user experience.",
+    image: "assets/thaat.png",
+    url: "https://thaat-three.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Radian company sa",
+    desc: "Developed a modern, responsive Saudi website for Radian Company consisting of 66 pages, using HTML, Tailwind CSS, and JavaScript, featuring smooth animations and an engaging user experience.",
+    image:
+      "assets/radian.png",
+    url: "https://radian-2-btiq.vercel.app/",
+  },
+ {
+    id: 3,
     title: "Nahr elorobah site ",
     desc: "A puplished site for Nahelorobah company",
     image: "assets/نهر العروبة 1.png",
     url: "https://cna.sa",
   },
   {
-    id: 2,
+    id: 4,
     title: "E-Commerce Store",
     desc: "A complete e-commerce store built with HTML, CSS, JavaScript, and Firebase",
     image:
@@ -21,7 +36,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 5,
     title: "Landing Page",
     desc: "A professional landing page designed with Bootstrap",
     image:
@@ -29,7 +44,7 @@ const projects = [
     url: "https://mostafamahmoudtv.github.io/landing_page_for_food_product/",
   },
   {
-    id: 4,
+    id: 6,
     title: "Landing page ",
     desc: "build Landing page with pure html and css",
     image:
@@ -37,14 +52,14 @@ const projects = [
     url: "https://mostafamahmoudtv.github.io/landing-page-with-bootstrap/",
   },
   {
-    id: 5,
+    id: 7,
     title: "Admin_dahboard ",
     desc: "build admin dashbaord with CRUD operaions React js",
     image: "/assets/main-admin-dashboard.png",
     url: "https://youtu.be/f4Xl_3xky_s?si=0dJOJjePRi9gvUtX",
   },
   {
-    id: 6,
+    id: 8,
     title: "todo-list app ",
     desc: "build todo list app with React js",
     image: "/assets/todolist.png",
@@ -60,6 +75,10 @@ const testimonials = [
   {
     id: 2,
     screenshot: "/assets/2.png",
+  },
+    {
+    id: 2,
+    screenshot: "/assets/feedback3.png",
   },
 ];
 
