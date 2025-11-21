@@ -15,11 +15,10 @@ const projects = [
     id: 2,
     title: "Radian company sa",
     desc: "Developed a modern, responsive Saudi website for Radian Company consisting of 66 pages, using HTML, Tailwind CSS, and JavaScript, featuring smooth animations and an engaging user experience.",
-    image:
-      "assets/radian.png",
+    image: "assets/radian.png",
     url: "https://radian-2-btiq.vercel.app/",
   },
- {
+  {
     id: 3,
     title: "Nahr elorobah site ",
     desc: "A puplished site for Nahelorobah company",
@@ -65,7 +64,13 @@ const projects = [
     image: "/assets/todolist.png",
     url: "https://mostafamahmoudtv.github.io/todo_app_reactjs/",
   },
-  
+  {
+    id: 9,
+    title: "adimin dashboard",
+    desc: "adimin dashboard from figma to html bootstrap",
+    image: "/assets/admindashboard.png",
+    url: "https://admin-dashboard-system.vercel.app/",
+  },
 ];
 const testimonials = [
   {
@@ -76,7 +81,7 @@ const testimonials = [
     id: 2,
     screenshot: "/assets/2.png",
   },
-    {
+  {
     id: 2,
     screenshot: "/assets/feedback3.png",
   },
