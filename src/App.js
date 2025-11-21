@@ -260,7 +260,7 @@ function App() {
           {testimonials.map((t) => (
             <motion.div
               key={t.id}
-              className="w-full sm:w-[48%] bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2"
+              className="w-full sm:w-auto bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
